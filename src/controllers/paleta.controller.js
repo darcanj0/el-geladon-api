@@ -46,5 +46,5 @@ export const updatePaletaController = (req, res) => {
 export const deletePaletaController = (req, res) => {
   const id = +req.params.id;
   paletasServices.deletePaleta({ id });
-  res.status(204).send({ message: "Paleta deletada com sucesso!" });
+  res.send({ message: "Paleta deletada com sucesso!" });
 };
