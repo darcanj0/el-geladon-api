@@ -1,6 +1,6 @@
 //regras de negocio
 //modela e interage com o banco de dados
-import paletas from "../database";
+import paletas from "../database/index.js";
 class PaletasServices {
   findPaletas() {
     if (paletas.length == 0) {

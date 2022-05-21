@@ -1,6 +1,6 @@
 //funcoes de callback chamadas nas rotas
 //acessam o request e retornam o response
-import PaletasServices from "../services/paleta.service";
+import PaletasServices from "../services/paleta.service.js";
 
 const paletasServices = new PaletasServices();
 

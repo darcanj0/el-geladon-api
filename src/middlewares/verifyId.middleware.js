@@ -1,4 +1,4 @@
-import paletas from "../database";
+import paletas from "../database/index.js";
 export const verifyIdPaletaMiddleware = (req, res, next) => {
   const id = +req.params.id;
 
