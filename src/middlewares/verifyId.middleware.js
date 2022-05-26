@@ -1,10 +1,17 @@
-import paletas from "../database/index.js";
-export const verifyIdPaletaMiddleware = (req, res, next) => {
-  const id = +req.params.id;
+import mongoose from "mongoose";
+import Paletas from "../model/Paleta.js";
 
-  const selectedPaleta = paletas.find((paleta) => paleta.id === id);
+export const verifyIdPaletaMiddleware = async (req, res, next) => {
+  const idParam = req.params.id;
+  // const alreadyDeleted = await Paletas.findByIdAndDelete(idParam);
+  // const idExists = await Paletas.exists({_id: idParam});
+  // if (alreadyDeleted === null 
+  if (!mongoose.Types.ObjectId.isValid(idParam)) {
+    return res.status(404).send({message:"A paleta não foi encontrada!"});
+  }
 
-  if (!selectedPaleta) {
+  const paleta = await Paletas.findById(idParam);
+  if (!paleta){
     return res.status(404).send({message:"A paleta não foi encontrada!"});
   }
 

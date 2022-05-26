@@ -1,0 +1,74 @@
+[
+  {
+    "sabor": "Açaí com Leite Condensado",
+    "descricao": "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    "foto": "./assets/images/acai-com-leite-condensado.png",
+    "preco": 10
+  },
+  {
+    "sabor": "Banana com Nutella",
+    "descricao": "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    "foto": "./assets/images/banana-com-nutella.png",
+    "preco": 10
+  },
+  {
+    "sabor": "Chocolate Belga com Brigadeiro",
+    "descricao": "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    "foto": "./assets/images/chocolate-belga-com-brigadeiro.png",
+    "preco": 10
+  },
+  {
+    "sabor": "Chocolate Branco",
+    "descricao": "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    "foto": "./assets/images/chocolate-branco.png",
+    "preco": 7
+  },
+  {
+    "sabor": "Coco com doce de Leite",
+    "descricao": "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    "foto": "./assets/images/coco-com-doce-de-leite.png",
+    "preco": 10
+  },
+  {
+    "sabor": "Coco",
+    "descricao": "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    "foto": "./assets/images/coco.png",
+    "preco": 7
+  },
+  {
+    "sabor": "Cookies",
+    "descricao": "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    "foto": "./assets/images/cookies.png",
+    "preco": 7
+  },
+  {
+    "sabor": "Doce de Leite com Doce de Leite",
+    "descricao": "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    "foto": "./assets/images/doce-de-leite-com-doce-de-leite.png",
+    "preco": 10
+  },
+  {
+    "sabor": "Limãozin humilde",
+    "descricao": "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    "foto": "./assets/images/limao.png",
+    "preco": 7
+  },
+  {
+    "sabor": "Maracujá com Leite Condensado",
+    "descricao": "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    "foto": "./assets/images/maracuja-com-leite-condensado.png",
+    "preco": 10
+  },
+  {
+    "sabor": "Chocolate Belga",
+    "descricao": "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    "foto": "./assets/images/chocolate-belga.png",
+    "preco": 7
+  },
+  {
+    "sabor": "Maracujázin da massa",
+    "descricao": "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    "foto": "./assets/images/maracuja.png",
+    "preco": 7
+  }
+]
