@@ -18,11 +18,19 @@ router.get(
   findPaletaByIdController
 );
 
-router.post("/create-paleta", verifyContentPaletaMiddleware, createPaletaController);
+router.post(
+  "/create-paleta",
+  verifyContentPaletaMiddleware,
+  createPaletaController
+);
 router.put(
   "/update-paleta/:id",
   verifyIdPaletaMiddleware,
   verifyContentPaletaMiddleware,
   updatePaletaController
 );
-router.delete("/delete-paleta/:id", verifyIdPaletaMiddleware, deletePaletaController);
+router.delete(
+  "/delete-paleta/:id",
+  verifyIdPaletaMiddleware,
+  deletePaletaController
+);

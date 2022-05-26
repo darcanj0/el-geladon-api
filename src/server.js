@@ -1,7 +1,7 @@
 import app from "./app.js";
 import { config } from "dotenv";
-import {env} from "process";
-import {connectToDatabase} from "./database/database.js";
+import { env } from "process";
+import { connectToDatabase } from "./database/database.js";
 
 config();
 

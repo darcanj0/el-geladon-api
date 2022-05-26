@@ -4,7 +4,6 @@
 import Paletas from "../model/Paleta.js";
 
 class PaletasServices {
-  
   async findPaletas() {
     const paletas = await Paletas.find();
     if (paletas.length == 0) {
@@ -36,10 +35,7 @@ class PaletasServices {
       foto,
       preco,
     };
-    await Paletas.findByIdAndUpdate(
-      id,
-      paletaModification
-    );
+    await Paletas.findByIdAndUpdate(id, paletaModification);
     const updatedPaleta = await Paletas.findById(id);
 
     return updatedPaleta;

@@ -9,7 +9,7 @@ export const findPaletasController = async (req, res) => {
     const allPaletas = await paletasServices.findPaletas();
     res.send(allPaletas);
   } catch (error) {
-    res.status(error.status).send({message: error.message});
+    res.status(error.status).send({ message: error.message });
   }
 };
 
