@@ -19,13 +19,18 @@ class PaletasServices {
   }
 
   async createPaleta({ sabor, descricao, foto, preco }) {
-    const newPaleta = await Paletas.create({
+    const newPaleta = {
       sabor,
       descricao,
       foto,
       preco,
-    });
-    return newPaleta;
+    };
+    try {
+      const createdPaleta = await Paletas.create(newPaleta);
+      return createdPaleta;
+    } catch (error) {
+      throw error;
+    }
   }
 
   async updatePaleta({ sabor, descricao, foto, preco }, id) {
@@ -35,10 +40,13 @@ class PaletasServices {
       foto,
       preco,
     };
-    await Paletas.findByIdAndUpdate(id, paletaModification);
-    const updatedPaleta = await Paletas.findById(id);
-
-    return updatedPaleta;
+    try {
+      await Paletas.findByIdAndUpdate(id, paletaModification);
+      const updatedPaleta = await Paletas.findById(id);
+      return updatedPaleta;
+    } catch (error) {
+      throw error;
+    }
   }
 
   async deletePaleta({ id }) {

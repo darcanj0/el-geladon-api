@@ -21,28 +21,45 @@ export const findPaletaByIdController = async (req, res) => {
 
 export const createPaletaController = async (req, res) => {
   const { sabor, descricao, foto, preco } = req.body;
-  const newPaleta = await paletasServices.createPaleta({
-    sabor,
-    descricao,
-    foto,
-    preco,
-  });
-  res.status(201).send(newPaleta);
+  try {
+    const newPaleta = await paletasServices.createPaleta({
+      sabor,
+      descricao,
+      foto,
+      preco,
+    });
+    res.status(201).send(newPaleta);
+  } catch (error) {
+    if (error.code === 11000) {
+      console.log(error.keyValue.sabor);
+      res
+        .status(400)
+        .send({
+          message: `Já existe uma paleta com o sabor: ${error.keyValue.sabor}`,
+        });
+    }
+  }
 };
 
 export const updatePaletaController = async (req, res) => {
   const id = req.params.id;
   const { sabor, descricao, foto, preco } = req.body;
-  const updatedPaleta = await paletasServices.updatePaleta(
-    {
-      sabor,
-      descricao,
-      foto,
-      preco,
-    },
-    id
-  );
-  res.status(200).send(updatedPaleta);
+  try {
+    const updatedPaleta = await paletasServices.updatePaleta(
+      {
+        sabor,
+        descricao,
+        foto,
+        preco,
+      },
+      id
+    );
+    res.status(200).send(updatedPaleta);
+  } catch (error) {
+    if (error.code === 11000){
+      res.status(400).send({message:`Já existe uma paleta com o sabor: ${error.keyValue.sabor}`});
+    }
+  }
 };
 
 export const deletePaletaController = async (req, res) => {
