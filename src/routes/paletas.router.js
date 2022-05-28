@@ -7,7 +7,7 @@ import {
   createPaletaController,
   updatePaletaController,
   deletePaletaController,
-} from "../controllers/paleta.controller.js";
+} from "../controllers/paletas.controllers.js";
 
 export const router = express.Router();
 
