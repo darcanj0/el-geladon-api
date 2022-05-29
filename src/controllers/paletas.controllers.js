@@ -65,5 +65,5 @@ export const updatePaletaController = async (req, res) => {
 export const deletePaletaController = async (req, res) => {
   const id = req.params.id;
   const deletedPaleta = await paletasServices.deletePaleta({ id });
-  res.status(200).send(deletedPaleta);
+  res.sendStatus(204);
 };
