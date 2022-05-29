@@ -19,12 +19,12 @@ const UserSchema = new Schema(
     admin: {
       type: Boolean,
       required: true,
-      default: false
+      default: false,
     },
   },
   { versionKey: false }
 );
 
-const Users = model ("users", UserSchema);
+const Users = model("users", UserSchema);
 
 export default Users;
