@@ -63,7 +63,7 @@ class UsersControllers {
 
   async deleteUser(req, res) {
     const id = req.params.id;
-    const deletedUser = await usersServices.deleteUser({id});
+    await usersServices.deleteUser({id});
     res.sendStatus(204);
   }
 }

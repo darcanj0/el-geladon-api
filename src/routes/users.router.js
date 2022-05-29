@@ -2,6 +2,7 @@ import express from "express";
 import UsersControllers from "../controllers/users.controllers.js";
 import { verifyIdUserMiddleware } from "../middlewares/verifyIdUser.middleware.js";
 import { verifyContentUserMiddleware } from "../middlewares/verifyContentUser.middleware.js";
+import {verifyTokenMiddleware} from "../middlewares/verifyToken.middleware.js";
 
 export const usersRouter = express.Router();
 const usersControllers = new UsersControllers();
@@ -22,6 +23,7 @@ usersRouter.post(
 
 usersRouter.put(
   "/update-user/:id",
+  verifyTokenMiddleware,
   verifyIdUserMiddleware,
   verifyContentUserMiddleware,
   usersControllers.updateUser
@@ -29,6 +31,7 @@ usersRouter.put(
 
 usersRouter.delete(
   "/delete-user/:id",
+  verifyTokenMiddleware,
   verifyIdUserMiddleware,
   usersControllers.deleteUser
 );

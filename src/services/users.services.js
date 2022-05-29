@@ -1,4 +1,5 @@
 import Users from "../model/User.js";
+import bcryptjs from "bcryptjs";
 
 class UsersServices {
   async findUsers() {
@@ -15,10 +16,11 @@ class UsersServices {
   }
 
   async createUser({ email, name, password, admin }) {
+    const encryptedPassword = await bcryptjs.hash(password, 8);
     const newUser = {
       email,
       name,
-      password,
+      password: encryptedPassword,
       admin,
     };
     try {
@@ -30,10 +32,11 @@ class UsersServices {
   }
 
   async updateUser({ id, email, name, password, admin }) {
+    const encryptedPassword = await bcryptjs.hash(password, 8);
     const userModification = {
       email,
       name,
-      password,
+      password: encryptedPassword,
       admin,
     };
     try {
