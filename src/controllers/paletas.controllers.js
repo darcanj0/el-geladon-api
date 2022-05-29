@@ -15,8 +15,8 @@ export const findPaletasController = async (req, res) => {
 
 export const findPaletaByIdController = async (req, res) => {
   const id = req.params.id;
-  const chosenPaleta = await paletasServices.findPaletaById({ id });
-  res.send(chosenPaleta);
+  const selectedPaleta = await paletasServices.findPaletaById({ id });
+  res.send(selectedPaleta);
 };
 
 export const createPaletaController = async (req, res) => {

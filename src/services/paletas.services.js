@@ -1,6 +1,3 @@
-//regras de negocio
-//modela e interage com o banco de dados
-
 import Paletas from "../model/Paleta.js";
 
 class PaletasServices {
@@ -14,7 +11,7 @@ class PaletasServices {
 
   async findPaletaById({ id }) {
     const selectedPaleta = await Paletas.findById(id);
-    console.log(selectedPaleta);
+    // console.log(selectedPaleta);
     return selectedPaleta;
   }
 
@@ -41,7 +38,7 @@ class PaletasServices {
       preco,
     };
     try {
-      await Paletas.findByIdAndUpdate(id, paletaModification);
+      await Paletas.updateOne({ _id: id }, paletaModification);
       const updatedPaleta = await Paletas.findById(id);
       return updatedPaleta;
     } catch (error) {

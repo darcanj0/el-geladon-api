@@ -1,6 +1,6 @@
 import express from "express";
-import { verifyIdPaletaMiddleware } from "../middlewares/verifyId.middleware.js";
-import { verifyContentPaletaMiddleware } from "../middlewares/verifyContent.middleware.js";
+import { verifyIdPaletaMiddleware } from "../middlewares/verifyIdPaleta.middleware.js";
+import { verifyContentPaletaMiddleware } from "../middlewares/verifyContentPaleta.middleware.js";
 import {
   findPaletasController,
   findPaletaByIdController,
