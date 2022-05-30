@@ -23,7 +23,6 @@ usersRouter.post(
 
 usersRouter.put(
   "/update-user/:id",
-  verifyTokenMiddleware,
   verifyIdUserMiddleware,
   verifyContentUserMiddleware,
   usersControllers.updateUser
@@ -31,7 +30,6 @@ usersRouter.put(
 
 usersRouter.delete(
   "/delete-user/:id",
-  verifyTokenMiddleware,
   verifyIdUserMiddleware,
   usersControllers.deleteUser
 );
