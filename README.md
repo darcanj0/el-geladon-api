@@ -9,6 +9,7 @@ The Database is hosted in MongoDBAtlas
 ## Deploy
 
 Api Link on Render: https://el-geladon-api-v2.onrender.com
+
 To see the paletas JSON list: https://el-geladon-api-v2.onrender.com/paletas/find-paletas
 
 Front End vanilla Link on Vercel: https://el-geladon-frontend-vanilla.vercel.app/
