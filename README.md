@@ -17,3 +17,16 @@ Front End vanilla Link on Vercel: https://el-geladon-frontend-vanilla.vercel.app
 ## Front End Repository
 
 https://github.com/darcanj0/el-geladon-frontend-vanilla
+
+## Stacks
+
+<ul>
+  <li>Nodejs</li>
+  <li>Express js</li>
+  <li>Bcryptjs</li>
+  <li>jsonwebtoken</li>
+  <li>cors</li>
+  <li>dotenv</li>
+  <li>Mongoose</li>
+  <li>MongoDB</li>
+</ul>
