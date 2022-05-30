@@ -9,5 +9,5 @@ const PORT = env.PORT || 3001;
 
 app.listen(PORT, () => {
   connectToDatabase();
-  console.log(`Running at http://localhost:${PORT}`);
+  console.log(`Running at port ${PORT}`);
 });

@@ -3,11 +3,11 @@ import mongoose from "mongoose";
 const { connect } = mongoose;
 
 export const connectToDatabase = () => {
-  connect("mongodb+srv://root:admin@api-elgeladon.c8e0u.mongodb.net/?retryWrites=true&w=majority", {
+  connect(process.env.URI_DATABASE, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-    .then(() => console.log(`Mongodb CONNECTED!`))
+    .then(() => console.log(`Mongodb Atlas CONNECTED!`))
     .catch((error) =>
       console.log(`Error when connecting with MongoDB, Error: ${error}`)
     );
