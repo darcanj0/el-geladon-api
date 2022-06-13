@@ -1,25 +1,5 @@
 # el-geladon-api
 
-## Como usar
-
-O projeto react está consumindo uma API, que puxa dados de um banco de dados local
-
-Para rodar o projeto localmente: 
-
--Criar um Database no mongodb com o nome "footpalace-db"
-
--Criar duas coleções de dados: "users" e "boots"
-
--Preencher a coleção boots com o arquivo "bootsConsumption.json"
-
--Rodar a API com o comando "npm run dev"
-
--Rodar o front end com o comando "npm start"
-
-Link repositório API: https://github.com/darcanj0/footpalace-api
-
-Link repositório FrontEnd: https://github.com/darcanj0/footpalace-react
-
 ## Description
 
 This project was developed in the third module of my webdev course at BlueEdTech and it has educational purposes.
